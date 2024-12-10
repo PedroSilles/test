@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.general{
+    /* height: 100vh; */
+    background-color:#000000;
+    color: white;
+    box-sizing: border-box;
+}
+
+.top {
+    width: 100%;
+    padding: 1% 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(30, 215, 96, 0.7); /* cor #1ED760 com 70% de opacidade */
+    position: fixed;  /* Faz o header ficar fixo no topo */
+    top: 0;           /* Fixa o header no topo da tela */
+    left: 0;          /* Alinha o header à esquerda */
+    z-index: 1000;    /* Garante que o header fique sobre outros elementos */
+    width: 100%;      /* Garante que o header ocupe toda a largura da tela */
+}
+
+
+.top__menu{
+    width: 100%;
+    display: flex;
+    justify-content:flex-start;
+    padding-left: 30px;
+    gap: 20px;
+}
+
+.top__menu__link{
+    color: black;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    padding-top: 10px;
+}
+
+.top__menu__link:hover{
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #1ED760; /* Adicionando brilho ao texto */
+    transition: text-shadow 0.3s ease;
+}
+
+
+.top__img {
+    height: 40px; 
+    width: auto;
+    display: flex;
+    padding-left: 30px;
+}
+
+.presentation{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15%;
+    padding: 10% 10%;
+}
+
+.presentation__written{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.presentation__written__title{
+    font-size: 30px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 200;
+}
+
+.presentation__written__second{
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 200;
+}
+
+strong{
+    color: 	#1ED760;
+    text-shadow: 0 0 10px #1ED760, 0 0 20px #1ED760, 0 0 30px #1ED760, 0 0 40px #1ED760;
+}
+
+.presentation__written_text{
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.presentation__img{
+    height: 400px;
+}
+
+.feet{
+    /* background-color: rgba(30, 215, 96, 0.7); */
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px #1ED760, 0 0 20px #1ED760, 0 0 30px #1ED760, 0 0 40px #1ED760;
+}
+
+.carousel {
+    position: relative;
+    width: 2000px;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 20px auto;
+    height: auto;
+}
+
+.carousel__slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    animation: slideAnimation 15s infinite;
+}
+
+.carousel__slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel__slide img {
+    width: 100%;
+    display: block;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-300%);
+    }
+    80% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.presentation__written_links{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.presentation__written_links__link{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    border: 0.5px solid;
+    padding: 10px;
+    border-radius: 20%;
+    border-color: #1ED760;
+}
+
+.presentation__written_links__link:hover{
+    text-shadow: 0 0 10px #1ED760, 0 0 20px #1ED760, 0 0 30px #1ED760, 0 0 40px #1ED760;
+    transform: scale(1.2);
+    background-color: #ffffff;
+    color: black;
+    border-color: pink;
+    transition: all 0.4s ease-in-out;
+}
+
